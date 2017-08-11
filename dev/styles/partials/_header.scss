@@ -1,0 +1,38 @@
+//HEADER
+header.main__header {
+	div.logo {
+		float: left;
+		width: 60px;
+			&:hover {
+				transform: rotate(15deg);
+				transition: transform ease-in-out 0.5s;
+			}
+		}
+	nav.main__nav {
+		ul {
+			padding: 0;
+			margin: 33px 0 0 0;
+			float: right;
+				a {
+					color: #393939;
+						&:hover {
+							color: $hot_pink;
+							transition: 0.5s color ease;
+						}
+				}
+				li {
+					font-size: 12px;
+					display: inline-block;
+					margin: 0 30px 0 0;
+				}
+		}
+	}
+	section.intro {
+		h1 {
+			line-height: 0.9em;
+		}
+		h1, h2 {
+			margin: 0;
+		}
+	}
+}

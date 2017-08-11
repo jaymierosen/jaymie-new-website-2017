@@ -1,0 +1,63 @@
+//GENERAL
+body {
+	font-family: $primary_font;
+	color: #393939;
+}
+div.wrapper {
+	max-width: 1820px;
+	padding: 25px 25px;
+}
+header.main__header {
+	padding: 0 20px;
+}
+section.intro, section.skills, section.work {
+	padding: 150px 20px;
+}
+footer.main__footer {
+	padding: 150px 20px 40px 20px;
+}
+section.skills, section.work {
+	margin: 50px 0;
+}
+//HEADINGS
+h1 {
+	font-size: 60px;
+	color: $hot_pink;
+	font-weight: $very_bold;
+}
+h1, h3, h4 {
+	text-transform: uppercase;
+}
+h1, h2, h3, h4, h5 {
+	text-align: center;
+}
+h2 {
+	font-size: 22px;
+	font-weight: $bold;
+	letter-spacing: 0.5px;
+}
+h3 {
+	font-size: 19px;
+	font-weight: $light;
+	margin: 80px 0 50px 0;
+	letter-spacing: 1px;
+}
+h4 {
+	font-weight: $light;
+	font-size: 17px;
+}
+h5 {
+	font-weight: $light;
+	font-size: 15px;
+	margin: 5px 0;
+}
+//PARAGRAPHS
+p {
+	text-align: center;
+	font-size: 14px;
+}
+//LISTS
+ul {
+	list-style-type: none;
+	padding: 0;
+}

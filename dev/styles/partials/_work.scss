@@ -1,0 +1,19 @@
+//WORK SECTION
+section.work {
+	h3 {
+		margin-top: 0;
+	}
+	div.work__item {
+		width: 48%;
+		float: left;
+		margin: 50px 1%;
+			div.work__item--img {
+				background: #eee;
+				width: 100%;
+				height: 270px;
+			}
+	}
+	h4.description {
+		margin: 50px 0 0 0;
+	}
+}
