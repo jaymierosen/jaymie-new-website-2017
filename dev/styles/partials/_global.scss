@@ -10,8 +10,11 @@ div.wrapper {
 header.main__header {
 	padding: 0 20px;
 }
-section.intro, section.skills, section.work {
+section.intro, section.skills {
 	padding: 150px 20px;
+}
+section.work {
+	padding: 50px 20px;
 }
 footer.main__footer {
 	padding: 150px 20px 40px 20px;
@@ -22,7 +25,7 @@ section.skills, section.work {
 //HEADINGS
 h1 {
 	font-size: 60px;
-	color: $hot_pink;
+	color: $black;
 	font-weight: $very_bold;
 }
 h1, h3, h4 {
@@ -39,8 +42,11 @@ h2 {
 h3 {
 	font-size: 19px;
 	font-weight: $light;
-	margin: 80px 0 50px 0;
+	margin: 80px 0 30px 0;
 	letter-spacing: 1px;
+		@media only screen and (max-width: 620px) {
+			font-size: 17px;
+		}
 }
 h4 {
 	font-weight: $light;
@@ -56,8 +62,29 @@ p {
 	text-align: center;
 	font-size: 14px;
 }
+//LINKS 
+a {
+	text-decoration: none;
+}
+a.download {
+	display: inline-block;
+}
 //LISTS
 ul {
 	list-style-type: none;
 	padding: 0;
+}
+//BUTTONS
+button, button.live__preview {
+	background: $black;
+	font-size: 14px;
+	border: none;
+	color: $white;
+	margin: 20px auto;
+	padding: 10px;
+	display: inline-block;
+}
+//FONT AWESOME ICONS
+i {
+	margin: 0 6px 0 0 ;
 }

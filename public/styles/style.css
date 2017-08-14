@@ -143,8 +143,11 @@ div.wrapper {
 header.main__header {
   padding: 0 20px; }
 
-section.intro, section.skills, section.work {
+section.intro, section.skills {
   padding: 150px 20px; }
+
+section.work {
+  padding: 50px 20px; }
 
 footer.main__footer {
   padding: 150px 20px 40px 20px; }
@@ -154,7 +157,7 @@ section.skills, section.work {
 
 h1 {
   font-size: 60px;
-  color: #ff1d5d;
+  color: #393939;
   font-weight: 900; }
 
 h1, h3, h4 {
@@ -171,8 +174,11 @@ h2 {
 h3 {
   font-size: 19px;
   font-weight: 300;
-  margin: 80px 0 50px 0;
+  margin: 80px 0 30px 0;
   letter-spacing: 1px; }
+  @media only screen and (max-width: 620px) {
+    h3 {
+      font-size: 17px; } }
 
 h4 {
   font-weight: 300;
@@ -187,13 +193,34 @@ p {
   text-align: center;
   font-size: 14px; }
 
+a {
+  text-decoration: none; }
+
+a.download {
+  display: inline-block; }
+
 ul {
   list-style-type: none;
   padding: 0; }
 
+button, button.live__preview {
+  background: #393939;
+  font-size: 14px;
+  border: none;
+  color: #ffffff;
+  margin: 20px auto;
+  padding: 10px;
+  display: inline-block; }
+
+i {
+  margin: 0 6px 0 0; }
+
 header.main__header div.logo {
   float: left;
   width: 60px; }
+  @media only screen and (max-width: 620px) {
+    header.main__header div.logo {
+      float: none; } }
   header.main__header div.logo:hover {
     transform: rotate(15deg);
     transition: transform ease-in-out 0.5s; }
@@ -202,24 +229,44 @@ header.main__header nav.main__nav ul {
   padding: 0;
   margin: 33px 0 0 0;
   float: right; }
+  @media only screen and (max-width: 620px) {
+    header.main__header nav.main__nav ul {
+      margin: 0;
+      float: none; } }
   header.main__header nav.main__nav ul a {
     color: #393939; }
     header.main__header nav.main__nav ul a:hover {
-      color: #ff1d5d;
+      color: #EBB5C1;
       transition: 0.5s color ease; }
+      @media only screen and (max-width: 620px) {
+        header.main__header nav.main__nav ul a:hover {
+          transition: none;
+          color: #393939; } }
   header.main__header nav.main__nav ul li {
     font-size: 12px;
     display: inline-block;
     margin: 0 30px 0 0; }
+    @media only screen and (max-width: 620px) {
+      header.main__header nav.main__nav ul li {
+        display: block;
+        font-size: 17px;
+        margin: 10px 30px 10px 0; } }
 
 header.main__header section.intro h1 {
-  line-height: 0.9em; }
+  line-height: 0.9em;
+  color: #D896D9; }
+  @media only screen and (max-width: 600px) {
+    header.main__header section.intro h1 {
+      font-size: 50px; } }
 
 header.main__header section.intro h1, header.main__header section.intro h2 {
   margin: 0; }
 
+header.main__header section.intro div.download__resume {
+  margin: 0 auto; }
+
 section.skills {
-  background: #393939;
+  background: #6ae9d0;
   text-align: center;
   color: #ffffff; }
   section.skills h3:nth-child(1) {
@@ -229,6 +276,9 @@ section.skills {
     font-size: 24px;
     display: inline-block;
     margin: 5px 15px; }
+    @media only screen and (max-width: 620px) {
+      section.skills li {
+        font-size: 20px; } }
 
 section.work h3 {
   margin-top: 0; }
@@ -237,16 +287,23 @@ section.work div.work__item {
   width: 48%;
   float: left;
   margin: 50px 1%; }
+  @media only screen and (max-width: 620px) {
+    section.work div.work__item {
+      width: 100%; } }
   section.work div.work__item div.work__item--img {
     background: #eee;
     width: 100%;
     height: 270px; }
+    section.work div.work__item div.work__item--img p {
+      margin: 0;
+      padding: 120px 0 0 0; }
 
 section.work h4.description {
   margin: 50px 0 0 0; }
 
 footer {
-  background: #ff1d5d;
+  background: url("../../assets/footer_bg.png");
+  background-size: cover;
   color: white; }
   footer h3 {
     margin-bottom: 0; }
@@ -256,9 +313,11 @@ footer {
     margin: 0 0 60px 0;
     color: white;
     display: block;
-    text-decoration: none;
     float: none;
     text-align: center; }
+    @media only screen and (max-width: 620px) {
+      footer a.email {
+        font-size: 28px; } }
   footer div.footer__info {
     margin: 150px 0 0 0; }
     footer div.footer__info p.copyright {
@@ -270,12 +329,24 @@ footer {
     footer div.footer__info nav.footer__nav ul {
       margin: 0;
       float: right; }
+      @media only screen and (max-width: 620px) {
+        footer div.footer__info nav.footer__nav ul {
+          float: none; } }
       footer div.footer__info nav.footer__nav ul a {
         color: white; }
         footer div.footer__info nav.footer__nav ul a:hover {
           color: #393939;
           transition: 0.5s color ease; }
+          @media only screen and (max-width: 620px) {
+            footer div.footer__info nav.footer__nav ul a:hover {
+              transition: none;
+              color: #393939; } }
       footer div.footer__info nav.footer__nav ul li {
         font-size: 12px;
         display: inline-block;
         margin: 0 30px 0 0; }
+        @media only screen and (max-width: 620px) {
+          footer div.footer__info nav.footer__nav ul li {
+            font-size: 17px;
+            display: block;
+            margin: 10px 30px 10px 0; } }

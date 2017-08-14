@@ -3,6 +3,9 @@ header.main__header {
 	div.logo {
 		float: left;
 		width: 60px;
+			@media only screen and (max-width: 620px) {
+				float: none;
+			}
 			&:hover {
 				transform: rotate(15deg);
 				transition: transform ease-in-out 0.5s;
@@ -13,26 +16,46 @@ header.main__header {
 			padding: 0;
 			margin: 33px 0 0 0;
 			float: right;
+				@media only screen and (max-width: 620px) {
+					margin: 0;
+					float: none;
+				}
 				a {
 					color: #393939;
 						&:hover {
-							color: $hot_pink;
+							color: $pink;
 							transition: 0.5s color ease;
+							@media only screen and (max-width: 620px) {
+								transition: none;
+								color: $black;
+							}
 						}
 				}
 				li {
 					font-size: 12px;
 					display: inline-block;
 					margin: 0 30px 0 0;
+						@media only screen and (max-width: 620px) {
+							display: block;
+							font-size: 17px;
+							margin: 10px 30px 10px 0;
+						}
 				}
 		}
 	}
 	section.intro {
 		h1 {
 			line-height: 0.9em;
+			color: $orchid;
+				@media only screen and (max-width: 600px) {
+					font-size: 50px;
+				}
 		}
 		h1, h2 {
 			margin: 0;
+		}
+		div.download__resume {
+			margin: 0 auto;
 		}
 	}
 }
