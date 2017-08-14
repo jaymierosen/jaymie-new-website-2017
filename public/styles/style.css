@@ -176,7 +176,7 @@ h3 {
   font-weight: 300;
   margin: 80px 0 30px 0;
   letter-spacing: 1px; }
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 800px) {
     h3 {
       font-size: 17px; } }
 
@@ -188,6 +188,8 @@ h5 {
   font-weight: 300;
   font-size: 15px;
   margin: 5px 0; }
+  h5 i {
+    color: #E3F281; }
 
 p {
   text-align: center;
@@ -218,7 +220,7 @@ i {
 header.main__header div.logo {
   float: left;
   width: 60px; }
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 800px) {
     header.main__header div.logo {
       float: none; } }
   header.main__header div.logo:hover {
@@ -229,28 +231,16 @@ header.main__header nav.main__nav ul {
   padding: 0;
   margin: 33px 0 0 0;
   float: right; }
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 800px) {
     header.main__header nav.main__nav ul {
       margin: 0;
       float: none; } }
   header.main__header nav.main__nav ul a {
     color: #393939; }
-    header.main__header nav.main__nav ul a:hover {
-      color: #EBB5C1;
-      transition: 0.5s color ease; }
-      @media only screen and (max-width: 620px) {
-        header.main__header nav.main__nav ul a:hover {
-          transition: none;
-          color: #393939; } }
   header.main__header nav.main__nav ul li {
-    font-size: 12px;
+    font-size: 17px;
     display: inline-block;
     margin: 0 30px 0 0; }
-    @media only screen and (max-width: 620px) {
-      header.main__header nav.main__nav ul li {
-        display: block;
-        font-size: 17px;
-        margin: 10px 30px 10px 0; } }
 
 header.main__header section.intro h1 {
   line-height: 0.9em;
@@ -276,7 +266,7 @@ section.skills {
     font-size: 24px;
     display: inline-block;
     margin: 5px 15px; }
-    @media only screen and (max-width: 620px) {
+    @media only screen and (max-width: 800px) {
       section.skills li {
         font-size: 20px; } }
 
@@ -287,7 +277,7 @@ section.work div.work__item {
   width: 48%;
   float: left;
   margin: 50px 1%; }
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 800px) {
     section.work div.work__item {
       width: 100%; } }
   section.work div.work__item div.work__item--img {
@@ -315,7 +305,7 @@ footer {
     display: block;
     float: none;
     text-align: center; }
-    @media only screen and (max-width: 620px) {
+    @media only screen and (max-width: 800px) {
       footer a.email {
         font-size: 28px; } }
   footer div.footer__info {
@@ -329,24 +319,12 @@ footer {
     footer div.footer__info nav.footer__nav ul {
       margin: 0;
       float: right; }
-      @media only screen and (max-width: 620px) {
+      @media only screen and (max-width: 800px) {
         footer div.footer__info nav.footer__nav ul {
           float: none; } }
       footer div.footer__info nav.footer__nav ul a {
         color: white; }
-        footer div.footer__info nav.footer__nav ul a:hover {
-          color: #393939;
-          transition: 0.5s color ease; }
-          @media only screen and (max-width: 620px) {
-            footer div.footer__info nav.footer__nav ul a:hover {
-              transition: none;
-              color: #393939; } }
       footer div.footer__info nav.footer__nav ul li {
-        font-size: 12px;
+        font-size: 17px;
         display: inline-block;
         margin: 0 30px 0 0; }
-        @media only screen and (max-width: 620px) {
-          footer div.footer__info nav.footer__nav ul li {
-            font-size: 17px;
-            display: block;
-            margin: 10px 30px 10px 0; } }
