@@ -12,12 +12,26 @@ header.main__header {
 }
 section.intro, section.skills {
 	padding: 150px 20px;
+		@media only screen and (max-width: 800px) {
+			padding: 75px 20px;
+		}
+}
+section.intro {
+	@media only screen and (max-width: 800px) {
+		padding: 50px 20px;
+	}
 }
 section.work {
 	padding: 50px 20px;
+		@media only screen and (max-width: 800px) {
+			padding: 25px 20px;
+		}
 }
 footer.main__footer {
-	padding: 150px 20px 40px 20px;
+	padding: 150px 20px 150px 20px;
+		@media only screen and (max-width: 800px) {
+			padding: 25px 20px 150px 20px;
+		}
 }
 section.skills, section.work {
 	margin: 50px 0;
@@ -26,21 +40,26 @@ section.skills, section.work {
 h1 {
 	font-size: 60px;
 	color: $black;
-	font-family: 'Shrikhand', sans-serif;
-}
-h3, h4 {
-	text-transform: uppercase;
+	line-height: 0.9em;
+	margin: 0 0 10px 0;
+	color: $orchid;
+	font-family: $secondary_font;
+		@media only screen and (max-width: 600px) {
+			font-size: 50px;
+		}
 }
 h1, h2, h3, h4, h5 {
 	text-align: center;
 }
 h2 {
 	font-size: 22px;
+	margin: 0;
 	font-weight: $bold;
 	letter-spacing: 0.5px;
 }
 h3 {
 	font-size: 19px;
+	text-transform: uppercase;
 	font-weight: $light;
 	margin: 80px 0 30px 0;
 	letter-spacing: 1px;
@@ -64,13 +83,19 @@ h5 {
 p {
 	text-align: center;
 	font-size: 14px;
+	line-height: 1.4em;
 }
 //LINKS 
 a {
 	text-decoration: none;
 }
-a.download {
-	display: inline-block;
+div.work__item a, a.download, div.work__item button.live__preview {
+	display: block;
+	width: 175px;
+	margin: 40px auto;
+}
+div.work__item button.live__preview {
+	cursor: auto;
 }
 //LISTS
 ul {
@@ -83,9 +108,9 @@ button, button.live__preview {
 	font-size: 14px;
 	border: none;
 	color: $white;
-	margin: 20px auto;
 	padding: 10px;
-	display: inline-block;
+	width: 175px;
+	display: block;
 }
 //FONT AWESOME ICONS
 i {

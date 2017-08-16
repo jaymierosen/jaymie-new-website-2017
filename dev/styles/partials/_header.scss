@@ -8,42 +8,33 @@ header.main__header {
 			}
 			&:hover {
 				transform: rotate(15deg);
-				transition: transform ease-in-out 0.5s;
+				transition: transform ease-in 0.5s;
 			}
-		}
+			svg {
+				@media only screen and (max-width: 800px) {
+					width: 60%;
+				}
+			}
+	}
 	nav.main__nav {
+		@media only screen and (max-width: 800px) {
+			display: none;
+		}
 		ul {
 			padding: 0;
 			margin: 33px 0 0 0;
 			float: right;
-				@media only screen and (max-width: 800px) {
-					margin: 0;
-					float: none;
-				}
 				a {
 					color: #393939;
 				}
 				li {
-					font-size: 17px;
+					font-size: 14px;
 					display: inline-block;
 					margin: 0 30px 0 0;
 				}
 		}
 	}
 	section.intro {
-		h1 {
-			line-height: 0.9em;
-			color: $orchid;
-				@media only screen and (max-width: 600px) {
-					font-size: 50px;
-				}
-		}
-		h1 {
-			margin: 0 0 10px 0;
-		}
-		h2 {
-			margin: 0;
-		}
 		div.download__resume {
 			margin: 0 auto;
 		}
