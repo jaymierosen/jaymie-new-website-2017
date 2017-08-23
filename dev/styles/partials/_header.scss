@@ -28,13 +28,19 @@ header.main__header {
 					color: #393939;
 				}
 				li {
-					font-size: 14px;
+					font-size: 16px;
 					display: inline-block;
 					margin: 0 30px 0 0;
+					font-family: $secondary_font;
+					text-transform: uppercase;
+					color: $grey;
 				}
 		}
 	}
 	section.intro {
+		p {
+			margin: 30px 0;
+		}
 		div.download__resume {
 			margin: 0 auto;
 		}

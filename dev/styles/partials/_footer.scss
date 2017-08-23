@@ -9,12 +9,10 @@ footer.main__footer {
 		}
 		a.email {
 			font-size: 60px;
-			font-weight: 600;
 			margin: 0 0 60px 0;
 			color: white;
 			display: block;
 			float: none;
-			text-align: center;
 				@media only screen and (max-width: 800px) {
 					font-size: 28px;
 				}
@@ -28,7 +26,6 @@ div.footer__info {
 		p.copyright {
 			font-size: 12px;
 			line-height: 1.4em;
-			font-weight: 300;
 			text-align: left;
 			margin: 0;
 			float: left;
@@ -44,7 +41,7 @@ div.footer__info {
 						margin: 20px 0;
 					}
 				a {
-					color: $black;
+					color: $grey;
 				}
 				li {
 					font-size: 17px;

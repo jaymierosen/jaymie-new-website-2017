@@ -133,12 +133,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 body {
-  font-family: "Work Sans", Arial, sans-serif;
   color: #393939; }
 
 div.wrapper {
-  max-width: 1820px;
-  padding: 25px 25px; }
+  max-width: 1320px;
+  padding: 25px 25px;
+  margin: 0 auto; }
 
 header.main__header {
   padding: 0 20px; }
@@ -169,29 +169,27 @@ section.skills, section.work {
   margin: 50px 0; }
 
 h1 {
-  font-size: 60px;
-  color: #393939;
+  font-size: 50px;
+  color: #505050;
   line-height: 0.9em;
   margin: 0 0 10px 0;
-  color: #D896D9;
-  font-family: "Shrikhand", serif; }
+  color: #D896D9; }
   @media only screen and (max-width: 600px) {
     h1 {
       font-size: 50px; } }
 
 h1, h2, h3, h4, h5 {
-  text-align: center; }
+  text-transform: uppercase;
+  font-family: "Unica One", serif; }
 
 h2 {
-  font-size: 22px;
+  font-size: 20px;
+  color: #505050;
   margin: 0;
-  font-weight: 600;
   letter-spacing: 0.5px; }
 
 h3 {
   font-size: 19px;
-  text-transform: uppercase;
-  font-weight: 300;
   margin: 80px 0 30px 0;
   letter-spacing: 1px; }
   @media only screen and (max-width: 800px) {
@@ -199,28 +197,34 @@ h3 {
       font-size: 17px; } }
 
 h4 {
-  font-weight: 300;
   font-size: 17px; }
 
+h4.description {
+  font-family: "Unica One", serif;
+  font-size: 24px;
+  margin: 70px 0 30px 0; }
+
 h5 {
-  font-weight: 300;
   font-size: 15px;
   margin: 5px 0; }
   h5 i {
     color: #E3F281; }
 
-p {
-  text-align: center;
+p, li {
   font-size: 14px;
-  line-height: 1.4em; }
+  line-height: 1.6em; }
+
+p, li {
+  font-family: "Vollkorn", Arial, sans-serif; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Unica One", serif; }
 
 div.work__item a, a.download, div.work__item button.live__preview {
-  display: block;
-  width: 175px;
-  margin: 40px auto; }
+  margin: 40px 0;
+  font-family: "Unica One", serif; }
 
 div.work__item button.live__preview {
   cursor: auto; }
@@ -230,10 +234,12 @@ ul {
   padding: 0; }
 
 button, button.live__preview {
-  background: #393939;
+  background: #505050;
   font-size: 14px;
   border: none;
   color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Unica One", serif;
   padding: 10px;
   width: 175px;
   display: block; }
@@ -265,44 +271,46 @@ header.main__header nav.main__nav ul {
   header.main__header nav.main__nav ul a {
     color: #393939; }
   header.main__header nav.main__nav ul li {
-    font-size: 14px;
+    font-size: 16px;
     display: inline-block;
-    margin: 0 30px 0 0; }
+    margin: 0 30px 0 0;
+    font-family: "Unica One", serif;
+    text-transform: uppercase;
+    color: #505050; }
+
+header.main__header section.intro p {
+  margin: 30px 0; }
 
 header.main__header section.intro div.download__resume {
   margin: 0 auto; }
 
 section.skills {
-  background: #6ae9d0;
-  text-align: center;
+  background: #505050;
   color: #ffffff; }
   section.skills h3:nth-child(1) {
     margin-top: 0; }
   section.skills li {
-    font-weight: 600;
     font-size: 24px;
     display: inline-block;
-    margin: 5px 15px; }
+    margin: 5px 15px 5px 0; }
     @media only screen and (max-width: 800px) {
       section.skills li {
         font-size: 20px; } }
 
 section.work h3 {
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 0; }
 
 section.work div.work__item {
   width: 48%;
-  float: left;
-  margin: 50px 1%; }
+  float: left; }
   @media only screen and (max-width: 800px) {
     section.work div.work__item {
       width: 100%; } }
   section.work div.work__item div.work__item--img img {
     width: 100%; }
-
-section.work h4.description {
-  font-family: "Shrikhand", serif;
-  font-size: 24px; }
+  section.work div.work__item button.live__preview {
+    font-family: "Unica One", serif; }
 
 footer.main__footer {
   background: url("../../assets/footer_bg.png");
@@ -312,12 +320,10 @@ footer.main__footer {
     margin-bottom: 0; }
   footer.main__footer a.email {
     font-size: 60px;
-    font-weight: 600;
     margin: 0 0 60px 0;
     color: white;
     display: block;
-    float: none;
-    text-align: center; }
+    float: none; }
     @media only screen and (max-width: 800px) {
       footer.main__footer a.email {
         font-size: 28px; } }
@@ -330,7 +336,6 @@ div.footer__info {
   div.footer__info p.copyright {
     font-size: 12px;
     line-height: 1.4em;
-    font-weight: 300;
     text-align: left;
     margin: 0;
     float: left; }
@@ -345,7 +350,7 @@ div.footer__info {
         float: none;
         margin: 20px 0; } }
     div.footer__info nav.footer__nav ul a {
-      color: #393939; }
+      color: #505050; }
     div.footer__info nav.footer__nav ul li {
       font-size: 17px;
       display: inline-block;

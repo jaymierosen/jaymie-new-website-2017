@@ -1,11 +1,11 @@
 //GENERAL
 body {
-	font-family: $primary_font;
 	color: #393939;
 }
 div.wrapper {
-	max-width: 1820px;
+	max-width: 1320px;
 	padding: 25px 25px;
+	margin: 0 auto;
 }
 header.main__header {
 	padding: 0 20px;
@@ -38,29 +38,27 @@ section.skills, section.work {
 }
 //HEADINGS
 h1 {
-	font-size: 60px;
-	color: $black;
+	font-size: 50px;
+	color: $grey;
 	line-height: 0.9em;
 	margin: 0 0 10px 0;
 	color: $orchid;
-	font-family: $secondary_font;
 		@media only screen and (max-width: 600px) {
 			font-size: 50px;
 		}
 }
 h1, h2, h3, h4, h5 {
-	text-align: center;
+	text-transform: uppercase;
+	font-family: $secondary_font;
 }
 h2 {
-	font-size: 22px;
+	font-size: 20px;
+	color: $grey;
 	margin: 0;
-	font-weight: $bold;
 	letter-spacing: 0.5px;
 }
 h3 {
 	font-size: 19px;
-	text-transform: uppercase;
-	font-weight: $light;
 	margin: 80px 0 30px 0;
 	letter-spacing: 1px;
 		@media only screen and (max-width: 800px) {
@@ -68,11 +66,14 @@ h3 {
 		}
 }
 h4 {
-	font-weight: $light;
 	font-size: 17px;
 }
+h4.description {
+	font-family: $secondary_font;
+	font-size: 24px;
+	margin: 70px 0 30px 0;
+}
 h5 {
-	font-weight: $light;
 	font-size: 15px;
 	margin: 5px 0;
 		i {
@@ -80,19 +81,23 @@ h5 {
 		}
 }
 //PARAGRAPHS
-p {
-	text-align: center;
+p, li {
 	font-size: 14px;
-	line-height: 1.4em;
+	line-height: 1.6em;
+}
+//LISTS
+p, li {
+	font-family: $primary_font; 
 }
 //LINKS 
 a {
 	text-decoration: none;
+	text-transform: uppercase;
+	font-family: $secondary_font;
 }
 div.work__item a, a.download, div.work__item button.live__preview {
-	display: block;
-	width: 175px;
-	margin: 40px auto;
+	margin: 40px 0;
+	font-family: $secondary_font;
 }
 div.work__item button.live__preview {
 	cursor: auto;
@@ -104,10 +109,12 @@ ul {
 }
 //BUTTONS
 button, button.live__preview {
-	background: $black;
+	background: $grey;
 	font-size: 14px;
 	border: none;
 	color: $white;
+	text-transform: uppercase;
+	font-family: $secondary_font;
 	padding: 10px;
 	width: 175px;
 	display: block;

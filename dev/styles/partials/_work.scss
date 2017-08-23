@@ -2,20 +2,19 @@
 section.work {
 	h3 {
 		margin-top: 0;
+		margin-bottom: 0;
 	}
 	div.work__item {
 		width: 48%;
 		float: left;
-		margin: 50px 1%;
 			@media only screen and (max-width: 800px) {
 				width: 100%;
 			}
-			div.work__item--img img {
+		div.work__item--img img {
 				width: 100%;
-			}
-	}
-	h4.description {
-		font-family: $secondary_font;
-		font-size: 24px;
+		}
+		button.live__preview {
+			font-family: $secondary_font;
+		}
 	}
 }
