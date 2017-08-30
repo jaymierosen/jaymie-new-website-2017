@@ -2,18 +2,9 @@
 header.main__header {
 	div.logo {
 		float: left;
-		width: 60px;
+		width: 150px;
 			@media only screen and (max-width: 800px) {
 				float: none;
-			}
-			&:hover {
-				transform: rotate(15deg);
-				transition: transform ease-in 0.5s;
-			}
-			svg {
-				@media only screen and (max-width: 800px) {
-					width: 60%;
-				}
 			}
 	}
 	nav.main__nav {
@@ -44,5 +35,27 @@ header.main__header {
 		div.download__resume {
 			margin: 0 auto;
 		}
+	}
+}
+.circle {
+	animation: orbit 6s infinite;
+	position: absolute;
+}
+.gradient-path {
+	position: relative;
+	fill: none; /* No fill so we're just enjoying the stroke */
+	stroke-width: 2; /* Make the stroke a bit wider so we can see it better */
+	stroke-linecap: round; /* Make the stroke edges nice & round */
+	stroke-linejoin: round; /* Smooth out corners */
+	--total-offset: 0; /* CSS var that will be populated by the JS for the CSS animation */
+	animation: stroke-anim 6s linear infinite;
+}
+@keyframes orbit {
+	from { transform: rotate(0deg) translateX(0px) rotate(0deg); }
+    to   { transform: rotate(10deg) translateX(50px) rotate(-50deg); }
+}
+@keyframes stroke-anim {
+	to {
+		stroke-dashoffset: var(--total-offset);
 	}
 }

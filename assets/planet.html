@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>planet</title>
+	<style>
+		.gradient-path { 
+			fill: none; /* No fill so we're just enjoying the stroke */
+			stroke-width: 2; /* Make the stroke a bit wider so we can see it better */
+			stroke-linecap: round; /* Make the stroke edges nice & round */
+			stroke-linejoin: round; /* Smooth out corners */
+			--total-offset: 0; /* CSS var that will be populated by the JS for the CSS animation */
+			animation: stroke-anim 6s linear infinite;
+		}
+		@keyframes stroke-anim {
+			to { stroke-dashoffset: var(--total-offset); }
+		}
+	</style>
+</head>
+<body>
+	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 100 125" style="enable-background:new 0 0 100 125;" xml:space="preserve">
+	<style type="text/css">
+		.st0{display:none;}
+		.st1{fill:#FFFFFF;stroke:#363E57;stroke-width:2;stroke-miterlimit:10;}
+		.st2{fill:none;stroke:#363E57;stroke-miterlimit:10;}
+	</style>
+	<title>69 all</title>
+	<path class="st0" d="M55,29.8C49.2,24,40,22.1,32.2,26c-7.8,3.9-11.9,12.2-10.8,20.4c-1.2,0.8,14.5,17.2,19.7,17.2
+		c3,0,5.9-0.7,8.8-2.1c7.8-3.9,11.9-12.2,10.8-20.4C61.5,40.4,56.4,29.3,55,29.8z"/>
+	<circle class="st1" cx="44.6" cy="38.7" r="20.7"/>
+	<path class="st2 gradient-path" d="M23.1,42.6c0,0-10.5,6.8-8.2,10.8s15.8-0.7,15.8-0.7s21.6-7.1,35.9-18.4c0,0,9.6-6.4,7.8-10.3s-13.6,0-13.6,0"
+		/>
+	</svg>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script>
+		// How many copies of the path to make (more = smoother gradient, but more clones of the path)
+		var resolution = 24;
+		// Using Array.from to...
+		var gradientPaths = Array.from(
+		// ...find all .gradient-path elements...
+			$('.gradient-path'), // ...and run this function over them:
+			function(path){
+				// Get the length of the path
+				var length = path.getTotalLength();
+				console.log(length);
+				// How big each segment of the gradient should be
+				var segmentLength = ( length / resolution );
+				// Create a group for all of the new paths to reside in
+				var g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+				console.log(g);
+				path.parentNode.insertBefore(g, path.nextSibling);
+				// Apply some styles for all the cloned paths on the <g> to be inherited
+				g.style.strokeDasharray =  segmentLength + ' ' + ( length - segmentLength );
+				for (var i = 0; i < resolution; i++) {
+					console.log(i);
+					// Clone the path
+					var c = path.cloneNode();
+					console.log(c);
+					// Give it a nice color spanning the entire spectrum
+					c.style.stroke = 'rgb(' + (i / resolution) * 360 + ', 61, 123)';
+					// How much the stroke-dash should be offset (`stroke-dashoffset`)
+					var offset = length * ( i / resolution );
+					c.style.strokeDashoffset = offset;
+					// Pass along the necessary offset for the CSS animation as a CSS var
+					c.style.setProperty('--total-offset', (length + offset) );
+					// Add the cloned path to the group
+					g.appendChild(c);
+				}
+				return path;
+			});
+		console.log(gradientPaths);
+	</script>
+</body>
+</html>

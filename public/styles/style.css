@@ -170,10 +170,10 @@ section.skills, section.work {
 
 h1 {
   font-size: 50px;
-  color: #505050;
+  color: #363E57;
   line-height: 0.9em;
   margin: 0 0 10px 0;
-  color: #D896D9; }
+  color: #C03D7A; }
   @media only screen and (max-width: 600px) {
     h1 {
       font-size: 50px; } }
@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5 {
 
 h2 {
   font-size: 20px;
-  color: #505050;
+  color: #363E57;
   margin: 0;
   letter-spacing: 0.5px; }
 
@@ -208,7 +208,7 @@ h5 {
   font-size: 15px;
   margin: 5px 0; }
   h5 i {
-    color: #E3F281; }
+    color: #D77265; }
 
 p, li {
   font-size: 14px;
@@ -234,31 +234,24 @@ ul {
   padding: 0; }
 
 button, button.live__preview {
-  background: #505050;
+  background: #363E57;
   font-size: 14px;
   border: none;
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Unica One", serif;
   padding: 10px;
-  width: 175px;
-  display: block; }
+  width: 175px; }
 
 i {
   margin: 0 6px 0 0; }
 
 header.main__header div.logo {
   float: left;
-  width: 60px; }
+  width: 150px; }
   @media only screen and (max-width: 800px) {
     header.main__header div.logo {
       float: none; } }
-  header.main__header div.logo:hover {
-    transform: rotate(15deg);
-    transition: transform ease-in 0.5s; }
-  @media only screen and (max-width: 800px) {
-    header.main__header div.logo svg {
-      width: 60%; } }
 
 @media only screen and (max-width: 800px) {
   header.main__header nav.main__nav {
@@ -276,7 +269,7 @@ header.main__header nav.main__nav ul {
     margin: 0 30px 0 0;
     font-family: "Unica One", serif;
     text-transform: uppercase;
-    color: #505050; }
+    color: #363E57; }
 
 header.main__header section.intro p {
   margin: 30px 0; }
@@ -284,8 +277,36 @@ header.main__header section.intro p {
 header.main__header section.intro div.download__resume {
   margin: 0 auto; }
 
+.circle {
+  animation: orbit 6s infinite;
+  position: absolute; }
+
+.gradient-path {
+  position: relative;
+  fill: none;
+  /* No fill so we're just enjoying the stroke */
+  stroke-width: 2;
+  /* Make the stroke a bit wider so we can see it better */
+  stroke-linecap: round;
+  /* Make the stroke edges nice & round */
+  stroke-linejoin: round;
+  /* Smooth out corners */
+  --total-offset: 0;
+  /* CSS var that will be populated by the JS for the CSS animation */
+  animation: stroke-anim 6s linear infinite; }
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(0px) rotate(0deg); }
+  to {
+    transform: rotate(10deg) translateX(50px) rotate(-50deg); } }
+
+@keyframes stroke-anim {
+  to {
+    stroke-dashoffset: var(--total-offset); } }
+
 section.skills {
-  background: #505050;
+  background: #363E57;
   color: #ffffff; }
   section.skills h3:nth-child(1) {
     margin-top: 0; }
@@ -313,7 +334,7 @@ section.work div.work__item {
     font-family: "Unica One", serif; }
 
 footer.main__footer {
-  background: url("../../assets/footer_bg.png");
+  background: url("../../assets/bg-space.jpg");
   background-size: cover;
   color: white; }
   footer.main__footer h3 {
@@ -350,7 +371,7 @@ div.footer__info {
         float: none;
         margin: 20px 0; } }
     div.footer__info nav.footer__nav ul a {
-      color: #505050; }
+      color: #363E57; }
     div.footer__info nav.footer__nav ul li {
       font-size: 17px;
       display: inline-block;

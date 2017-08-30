@@ -42,7 +42,7 @@ h1 {
 	color: $grey;
 	line-height: 0.9em;
 	margin: 0 0 10px 0;
-	color: $orchid;
+	color: $pink;
 		@media only screen and (max-width: 600px) {
 			font-size: 50px;
 		}
@@ -77,7 +77,7 @@ h5 {
 	font-size: 15px;
 	margin: 5px 0;
 		i {
-			color: #E3F281;
+			color: $coral;
 		}
 }
 //PARAGRAPHS
@@ -87,9 +87,9 @@ p, li {
 }
 //LISTS
 p, li {
-	font-family: $primary_font; 
+	font-family: $primary_font;
 }
-//LINKS 
+//LINKS
 a {
 	text-decoration: none;
 	text-transform: uppercase;
@@ -117,7 +117,6 @@ button, button.live__preview {
 	font-family: $secondary_font;
 	padding: 10px;
 	width: 175px;
-	display: block;
 }
 //FONT AWESOME ICONS
 i {
