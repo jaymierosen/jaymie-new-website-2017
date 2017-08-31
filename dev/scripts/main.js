@@ -1,8 +1,9 @@
 $(function(){
     // particlesJS.load(@dom-id, @path-json, @callback (optional));
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
-        console.log('callback - particles.js config loaded');
-    });
+    // particlesJS.load('particles-js', 'assets/particles.json', function() {
+    //     console.log('callback - particles.js config loaded');
+    // });
+    // https://codepen.io/shshaw/pen/JyMvxr
     // How many copies of the path to make (more = smoother gradient, but more clones of the path)
     var resolution = 24;
     // Using Array.from to...
@@ -38,25 +39,64 @@ $(function(){
             }
             return path;
         });
-        // declare variable
-        var scrollTop = $(".scrollTop");
+        // declare variables
+        var $scrollTop;
+        var $navLink;
+        var $topPos;
+        var $logo;
+        $logo = $('div.logo');
         $(window).scroll(function() {
-            // declare variable
-            var topPos = $(this).scrollTop();
-            // if user scrolls down - show scroll to top button
-            if (topPos < 500) {
-                scrollTop.css({
-                    "opacity": "1"
-                });
-            } else {
-                scrollTop.css({
+            $scrollTop = $('.scrollTop');
+            $topPos = $(this).scrollTop();
+            // https://stackoverflow.com/questions/4188903/opposite-of-scrolltop-in-jquery
+            // how to create a new jquery function
+            // $.fn.scrollBottom = function() {
+            //     return $(window).height() - $(this).scrollTop() - $(this).height();
+            // };
+            // var botPos = $(this).scrollBottom();
+            // if user scrolls down - show menu
+            if ($topPos > 120) {
+                $scrollTop.css({
                     "opacity": "1",
                     "position": "fixed",
+                    "top": "0",
+                    "left": "0",
                     "width": "100%",
-                    "background": "#D77265",
+                    "background": "#ffffff",
+                    "border-bottom": "#363E57 1px solid",
                     "z-index": "2",
-                    "color": "#ffffff"
+                    "padding": "0 0 30px 0"
+                });
+                $logo.css({
+                    "width": "80px",
+                    "margin": "30px"
+                });
+            // if user scrolls down - show menu
+            } else {
+                $scrollTop.css({
+                    "opacity": "1",
+                    "position": "static",
+                    "width": "100%",
+                    "background": "transparent",
+                    "z-index": "0",
+                    "border-bottom": "none",
+                    "padding": "0 0 0 0"
+                });
+                $logo.css({
+                    "width": "150px",
                 });
             }
         }); // scroll END
+        // https://www.sitepoint.com/javascript-media-queries/
+        const mq = window.matchMedia( "(max-width: 800px)" );
+        $navLink = $("nav.main__nav ul");
+        if (mq.matches) {
+            $navLink.css({
+                "text-align": "center",
+                "margin": "0 auto"
+            });
+            $logo.css({
+                "margin": "0 auto"
+            });
+        }
 })

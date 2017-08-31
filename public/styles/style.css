@@ -246,36 +246,43 @@ button, button.live__preview {
 i {
   margin: 0 6px 0 0; }
 
-header.main__header div.logo {
-  float: left;
-  width: 150px; }
-  @media only screen and (max-width: 800px) {
-    header.main__header div.logo {
-      float: none; } }
-
-@media only screen and (max-width: 800px) {
-  header.main__header nav.main__nav {
-    display: none; } }
-
-header.main__header nav.main__nav ul {
-  padding: 0;
-  margin: 33px 0 0 0;
-  float: right; }
-  header.main__header nav.main__nav ul a {
-    color: #393939; }
-  header.main__header nav.main__nav ul li {
-    font-size: 16px;
-    display: inline-block;
-    margin: 0 30px 0 0;
-    font-family: "Unica One", serif;
-    text-transform: uppercase;
-    color: #363E57; }
-
-header.main__header section.intro p {
-  margin: 30px 0; }
-
-header.main__header section.intro div.download__resume {
-  margin: 0 auto; }
+header.main__header {
+  position: relative; }
+  header.main__header nav.main__nav div.logo {
+    float: left;
+    width: 150px; }
+    @media only screen and (max-width: 800px) {
+      header.main__header nav.main__nav div.logo {
+        float: none;
+        margin: 0 auto;
+        text-align: center; } }
+  header.main__header nav.main__nav ul {
+    padding: 0;
+    margin: 33px 0 0 0;
+    float: right; }
+    @media only screen and (max-width: 800px) {
+      header.main__header nav.main__nav ul {
+        float: none;
+        margin: 0 auto;
+        text-align: center; } }
+    header.main__header nav.main__nav ul a {
+      color: #363E57; }
+    header.main__header nav.main__nav ul li {
+      font-size: 16px;
+      display: inline-block;
+      margin: 0 30px 0 0;
+      font-family: "Unica One", serif;
+      text-transform: uppercase;
+      text-align: left; }
+      @media only screen and (max-width: 800px) {
+        header.main__header nav.main__nav ul li {
+          text-align: center;
+          margin: 0 15px 0 0;
+          font-size: 22px; } }
+  header.main__header section.intro p {
+    margin: 30px 0; }
+  header.main__header section.intro div.download__resume {
+    margin: 0 auto; }
 
 .circle {
   animation: orbit 6s infinite;
